@@ -40,7 +40,8 @@ for (i in 1:1000) {
 }
 results3 <- do.call("rbind", results3)
 
-results4 <- map2(array_tree(y, 2), array_tree(grp2, 1))
+results4 <- map2(array_tree(y, 2), array_tree(grp2, 1),
+    function(x, y) residuals(lm(x ~ y)))
 results4 <- do.call("rbind", results4)
 are_equal(results3, results4)
 ```
