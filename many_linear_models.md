@@ -40,6 +40,7 @@ for (i in 1:1000) {
 }
 results3 <- do.call("rbind", results3)
 
+# the more elegant way using tidyverse
 results4 <- map2(array_tree(y, 2), array_tree(grp2, 1),
     function(x, y) residuals(lm(x ~ y)))
 results4 <- do.call("rbind", results4)
