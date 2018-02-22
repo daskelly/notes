@@ -29,7 +29,8 @@ $PBS_O_WORKDIR
 $PBS_ARRAYID
 ```
 
-Altering an array job to run only up to 100 simultaneously
+Altering an array job to run only up to 100 simultaneously. 
+(This does not seem to work on cadillac).
 ```bash
 qalter 2291024[] -t %100
 ```
