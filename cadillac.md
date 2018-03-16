@@ -1,12 +1,5 @@
 # Running a compute job with `torque`
 
-Example commands:
-```bash
-showres
-checkjob 2458391
-showstart 2219420
-```
-
 An interactive node
 ```bash
 qsub -I -l procs=1,mem=12gb,walltime=4:00:00 -q interactive
