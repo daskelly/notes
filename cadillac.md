@@ -35,3 +35,9 @@ showres
 checkjob 2219420[1]   # gives info on a job
 showstart 2219420[1]  #  tells you when a job is predicted to start and finish
 ```
+
+Altering an array job to run only up to 100 simultaneously. 
+(This does not seem to work on cadillac).
+```bash
+qalter 2291024[] -t %100
+```
