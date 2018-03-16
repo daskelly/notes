@@ -28,3 +28,10 @@ Variables
 $PBS_O_WORKDIR
 $PBS_ARRAYID
 ```
+
+Understanding maintenance reservations:
+```bash
+showres
+checkjob 2219420[1]   # gives info on a job
+showstart 2219420[1]  #  tells you when a job is predicted to start and finish
+```
