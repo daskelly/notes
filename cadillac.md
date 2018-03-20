@@ -1,5 +1,11 @@
 # Running a compute job with `torque`
 
+System checks:
+```bash
+quotas   # /usr/local/bin/quotas
+qcheck   # based on /usr/local/bin/motd
+```
+
 An interactive node
 ```bash
 qsub -I -l procs=1,mem=12gb,walltime=4:00:00 -q interactive
