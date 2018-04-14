@@ -2,7 +2,7 @@
 
 Useful commands:
 ```bash
-rg probs   # recursive search of dir to find lines in files containing "probs"
+rg probs   # ripgrep, recursive search of dir to find lines in files containing "probs"
 ```
 
 System checks:
