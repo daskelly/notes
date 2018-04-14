@@ -1,5 +1,10 @@
 # Running a compute job with `torque`
 
+Useful commands:
+```bash
+rg probs   # recursive search of dir to find lines in files containing "probs"
+```
+
 System checks:
 ```bash
 quotas   # /usr/local/bin/quotas
