@@ -1,0 +1,25 @@
+---
+title: "Mixing languages"
+author: "Dan Skelly"
+date: "4/24/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(reticulate)
+```
+
+```{bash}
+echo 1 2 3 > all_nums.txt
+```
+
+```{python}
+x = 'hello, python world!'
+print(x.split(' '))
+```
+
+```{r}
+x <- rnorm(1e4)
+hist(x)
+```
