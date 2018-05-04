@@ -1,0 +1,16 @@
+---
+title: "test"
+author: "me"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output: html_document
+---
+
+```{r setup, include=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+text
+
+### Setup
+
+more text
