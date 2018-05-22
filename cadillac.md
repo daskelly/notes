@@ -45,3 +45,8 @@ Altering an array job to run only up to 100 simultaneously.
 ```bash
 qalter 2291024[] -t %100
 ```
+
+Transferring files using an rsync job
+```bash
+qsub -v IN=/source/dir,OUT=/target/dir ~/repos/rsync.pbs
+```
