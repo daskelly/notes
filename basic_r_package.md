@@ -14,9 +14,17 @@ create(package_name)
 
 # Next steps
 
- * edit $package_name/DESCRIPTION file
+ * edit $package_name/DESCRIPTION file. Also need to list package dependencies under Imports.
  * add R code to files in $package_name/R. Perhaps one function per file?
  * put documentation before each function
+
+# Dependencies example
+
+```
+Imports:
+    data.table (>= 1.9.4),
+    dplyr
+```
 
 # Documentation
 
