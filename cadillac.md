@@ -38,6 +38,7 @@ Understanding maintenance reservations:
 showres
 checkjob 2219420[1]   # gives info on a job
 showstart 2219420[1]  #  tells you when a job is predicted to start and finish
+checkjob -v -v -v 3077840[1] 2>&1 | less
 ```
 
 Altering an array job to run only up to 100 simultaneously. 
