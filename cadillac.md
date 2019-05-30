@@ -1,5 +1,10 @@
 # Running a compute job with `torque`
 
+Check if packages installed in CentOS:
+```bash
+rpm -qa | grep -e pcre -e readline -e lzma
+```
+
 Useful commands:
 ```bash
 rg probs   # ripgrep, recursive search of dir to find lines in files containing "probs"
