@@ -24,6 +24,10 @@ qsub -I -l procs=1,mem=12gb,walltime=4:00:00 -q interactive
 Modules
 ```bash
 module -l avail 2>&1 | grep -i samtools
+# Seurat on helix
+module load R/3.6.0
+module unload gcc/4.9.2
+module load gcc/7.1.0
 ```
 
 Dependencies
