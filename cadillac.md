@@ -60,3 +60,16 @@ Transferring files using an rsync job
 ```bash
 qsub -v IN=/source/dir,OUT=/target/dir ~/repos/rsync.pbs
 ```
+
+Illustration of how to run a complex
+job that depends on multiple components:
+```bash
+# Submitting everything to run at once:
+JOB1=$(qsub pcs_for_harmony.pbs)
+ID1=$(echo $JOB1 | awk -F. '{ print $1; }')
+JOB2=$(qsub -W depend=afterok:$ID1 run_harmony.pbs)
+ID2=$(echo $JOB2 | awk -F. '{ print $1; }')
+qsub -W depend=afterokarray:$ID2 analyze_harmony.pbs
+qsub -W depend=afterokarray:$ID2 specific_markers_harmony.pbs
+qsub -W depend=afterokarray:$ID2 find_markers_harmony.pbs
+```
