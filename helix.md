@@ -33,6 +33,7 @@ module load gcc/7.1.0
 Dependencies
 ```bash
 qsub -W depend=afterok:2268893 submit.pbs
+qsub -W depend=afterok:2268893:2268894:2268895 submit.pbs
 qsub -W depend=afterokarray:2269864[] submit.pbs
 ```
 
