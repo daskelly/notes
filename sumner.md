@@ -76,3 +76,25 @@ date
 
 # run this script by calling sbatch filename.slurm
 ```
+
+Array job
+```
+#!/bin/bash
+#SBATCH --job-name=test
+#SBATCH --partition=compute  # ==queue
+#SBATCH --nodes=1            # number of nodes
+#SBATCH --ntasks=2           # number of cores
+#SBATCH --mem-per-cpu=2G
+#SBATCH --time=00:05:00      # time (HH:MM:SS)
+#SBATCH --output=%x.o%A_%a      # stdout and stderr
+#SBATCH --array=1,3,4,5
+module list
+
+CWD=$(pwd)
+echo "Current dir is $CWD"
+
+echo "STDERR here" 1>&2
+echo "STDOUT here"
+
+# run this script by calling sbatch test.slurm
+```
