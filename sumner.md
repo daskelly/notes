@@ -2,7 +2,7 @@
 
 Interactive job
 ```bash
-srun -p compute -q batch -t 8:00 -c 1 --pty $SHELL
+srun -q batch -t 8:00 -c 1 --pty $SHELL
 srun --pty bash
 ```
 
