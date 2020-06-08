@@ -6,6 +6,12 @@ srun -p compute -q batch -t 8:00 -c 1 --pty $SHELL
 srun --pty bash
 ```
 
+Priority
+```bash
+sprio -u $USER
+scontrol update jobid=2087833 nice=100  # decrease priority by 100
+```
+
 Examples
 ```bash
 #!/bin/bash
