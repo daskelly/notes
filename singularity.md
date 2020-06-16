@@ -1,6 +1,7 @@
 # Building and running singularity containers
 
-Overall advice:
+## Overall advice
+
 Always make sure to try finding a pre-built container first.
 This is the easiest path forward.
 
@@ -17,7 +18,8 @@ my whole `%post` section is
 ## Steps to build a more complicated container when needed.
 E.g. building a container holding R and the Seurat package
 
- * Build a sandbox minimal container (use singularity remote)
- * Fire this up as writable 
- * Test installing R packages
+ * Build a sandbox minimal container [example def file](sandbox.def). 
+Build using e.g. `singularity build --remote --sandbox sandbox.sif sandbox.def`
+ * Fire up this container as writable `singularity shell --writable sandbox.sif` 
+ * Test things, e.g. installing `R` packages
 

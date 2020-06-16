@@ -1,0 +1,11 @@
+bootstrap: docker
+from: r-base:4.0.1
+
+%post
+    apt-get -y update
+    apt-get install -y \
+        curl \
+        libcurl4-openssl-dev \
+        libssl-dev \
+        git
+    Rscript --slave -e "install.packages('gh')"
