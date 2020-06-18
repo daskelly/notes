@@ -6,6 +6,11 @@ srun -q batch -t 8:00 -c 1 --pty $SHELL
 srun --pty bash
 ```
 
+Dependencies
+```bash
+sbatch --dependency=afterok:$JOBID job.slurm
+```
+
 Priority
 ```bash
 sprio -u $USER
