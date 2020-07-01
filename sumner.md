@@ -104,6 +104,8 @@ module list
 CWD=$(pwd)
 echo "Current dir is $CWD"
 
+echo "On job $SLURM_ARRAY_TASK_ID"
+
 echo "STDERR here" 1>&2
 echo "STDOUT here"
 
