@@ -11,6 +11,11 @@ Dependencies
 sbatch --dependency=afterok:$JOBID job.slurm
 ```
 
+Delay a job
+```bash
+sbatch --begin=now+5hour *.slurm 
+```
+
 Priority
 ```bash
 sprio -u $USER
@@ -110,4 +115,10 @@ echo "STDERR here" 1>&2
 echo "STDOUT here"
 
 # run this script by calling sbatch test.slurm
+```
+
+Viewing an HTML file
+```
+module load python36
+python3 -m http.server --bind=$(hostname)
 ```
