@@ -122,3 +122,9 @@ Viewing an HTML file
 module load python36
 python3 -m http.server --bind=$(hostname)
 ```
+
+Determine the specifics of why a SLURM job is still pending 
+execution besides the REASON CODE given by the squeue command
+```
+scontrol -d show job 332998 | grep Reason
+```
