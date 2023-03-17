@@ -8,7 +8,7 @@ srun --pty bash
 
 Dependencies
 ```bash
-sbatch --dependency=afterok:$JOBID job.slurm
+sbatch --dependency=afterok:$JOBID1:$JOBID2:$JOBID3 job.slurm
 ```
 
 Delay a job
