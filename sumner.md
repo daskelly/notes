@@ -32,8 +32,8 @@ Examples
 #SBATCH --mem-per-cpu=2G
 #SBATCH --time=00:05:00      # time (HH:MM:SS)
 #SBATCH --output=%x.o%j      # stdout and stderr
-###SBATCH --mail-user=<USER_ID>@jax.org
-###SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=<USER_ID>@jax.org
+#SBATCH --mail-type=END,FAIL
 module list
 
 CWD=$(pwd)
@@ -54,6 +54,8 @@ echo "STDOUT here"
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16gb
+#SBATCH --mail-user=<USER_ID>@jax.org
+#SBATCH --mail-type=END,FAIL
 #SBATCH --time=23:59:59
 #SBATCH --array=1-5
 
@@ -70,6 +72,8 @@ singularity run --app Rscript ${CONTAINER} ${RFILE} ${CORES} ${SEED}
 #SBATCH --partition=compute  # ==queue
 #SBATCH --nodes=1            # number of nodes
 #SBATCH --ntasks=20          # number of cores
+#SBATCH --mail-user=<USER_ID>@jax.org
+#SBATCH --mail-type=END,FAIL
 #SBATCH --mem-per-cpu=30G
 #SBATCH --time=48:00:00      # time (HH:MM:SS)
 #SBATCH --output=%x.o%j      # stdout and stderr
@@ -100,6 +104,8 @@ Array job
 #SBATCH --partition=compute  # ==queue
 #SBATCH --nodes=1            # number of nodes
 #SBATCH --ntasks=2           # number of cores
+#SBATCH --mail-user=<USER_ID>@jax.org
+#SBATCH --mail-type=END,FAIL
 #SBATCH --mem-per-cpu=2G
 #SBATCH --time=00:05:00      # time (HH:MM:SS)
 #SBATCH --output=%x.o%A_%a      # stdout and stderr
