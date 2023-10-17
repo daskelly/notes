@@ -1,0 +1,26 @@
+bootstrap: docker
+from: mambaorg/micromamba:git-cf20eb5-bionic
+
+%help
+    mamba docker containers: https://hub.docker.com/r/mambaorg/micromamba
+    opencv https://pypi.org/project/opencv-python/
+    
+    FYI this works:
+    singularity pull docker://mambaorg/micromamba:git-cf20eb5-bionic
+    But this doesn't:
+    singularity pull docker://mambaorg/micromamba:git-536376e-lunar
+
+    We can open a shell
+    singularity pull docker://mambaorg/micromamba:git-cf20eb5-bionic
+    singularity shell micromamba_git-cf20eb5-bionic.sif
+    > micromamba --version
+
+    Run *this* container with
+    > singularity run <image-name> python /path/to/script.py
+
+%post
+    micromamba install python pip
+    pip install opencv-python
+
+%runscript
+    exec "$@"
