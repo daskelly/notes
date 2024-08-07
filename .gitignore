@@ -1,2 +1,5 @@
 *history
 .Rproj.user
+*.o[0-9]*
+obsolete
+logfiles
