@@ -1,3 +1,4 @@
+# see https://github.com/satijalab/seurat/pull/9449
 library(Seurat)
 myenv <- new.env()
 source(paste0('https://raw.githubusercontent.com/daskelly/seurat/refs/heads/',
